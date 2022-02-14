@@ -6,13 +6,13 @@ public class Food extends Product {
 
     private String composition;
 
-    public Food(String nameOfProduct, double amountOfProduct, double priceOfProduct, String composition) {
+    public Food(String nameOfProduct, float amountOfProduct, float priceOfProduct, String composition) {
         super(nameOfProduct, amountOfProduct, priceOfProduct);
         this.composition = composition;
     }
 
-    public Food(String nameOfProduct, double priceOfProduct) {
-        super(nameOfProduct, priceOfProduct);
+    public Food(float priceOfProduct) {
+        super(priceOfProduct);
     }
 
     public Food() {

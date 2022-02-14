@@ -17,22 +17,15 @@ public class ShopStart {
         client.lookMyOrderAtWeb();
 
         Store store = new Store();
-        System.out.println(store.countProductsAtStore());
         System.out.println(store.getProductsFromProvider());
-        //System.out.println(store.countExistProductsAtStore());
+        System.out.println(store.countProductsAtStore());
+        System.out.println(store.countExistProductsAtStore());
 
         Receipt receipt = new Receipt();
         receipt.printReceipt();
 
 
-
-
-
-
     }
-
-
-
 
 
 }

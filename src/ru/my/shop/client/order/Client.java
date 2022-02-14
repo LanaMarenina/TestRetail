@@ -8,18 +8,18 @@ public class Client {
     private String addressOfClient = "Москва, ул. Строителей, 123";
     private String phoneOfClient = "8-900-123-45-67";
     private int cardNumber;
+    private Web web = new Web();
+
 
     public Client(String nameOfClient, String addressOfClient, String phoneOfClient) {
         this.nameOfClient = nameOfClient;
         this.addressOfClient = addressOfClient;
         this.phoneOfClient = phoneOfClient;
     }
+
     public Client() {
 
     }
-
-
-
 
 
     public String getNameOfClient() {
@@ -47,35 +47,29 @@ public class Client {
     }
 
 
-    private Order order = new Order();
-    private Web web = new Web();
-
-
     public void openTheWeb() {
 
         web.showExistProductsFromStore();
-        System.out.println("Сайт загружен");
+        System.out.println("Сайт загружен" + "\n");
 
     }
 
     public void chooseProductsAtWeb() {
 
-        System.out.println(order.formOrder());
+        System.out.println(web.formOrder());
 
     }
-
 
 
     public void lookMyOrderAtWeb() {
 
         System.out.println("Ваш заказ: ");
-        System.out.println(order.showOrderToClient());
+        System.out.println(web.showOrderToClient());
 
 
     }
 
     public void payForOrder() {
-
 
 
     }

@@ -9,34 +9,44 @@ import ru.my.shop.store.Products.Food.Bread;
 import ru.my.shop.store.Products.Food.Milk;
 import ru.my.shop.store.Products.Product;
 
+import java.util.Scanner;
+
 public class Store {
 
 
-    private Product breadAtStore = new Bread("Хлеб", 25.1);
-    private int breadAtStoreNum = 12;
+    private Product breadAtStore = new Bread();
+    private int breadAtStoreNum = 10;
+    private int breadFromProviderNum;
 
-    private Product milkAtStore = new Milk("Молоко", 75.8);
-    private int milkAtStoreNum = 13;
+    private Product milkAtStore = new Milk();
+    private int milkAtStoreNum = 10;
+    private int milkFromProviderNum;
 
-    private Product beerAtStore = new Beer("Пиво", 175.5);
-    private int beerAtStoreNum = 14;
+    private Product beerAtStore = new Beer();
+    private int beerAtStoreNum = 10;
+    private int beerFromProviderNum;
 
-    private Product juiceAtStore = new Juice("Сок", 120.2);
-    private int juiceAtStoreNum = 15;
+    private Product juiceAtStore = new Juice();
+    private int juiceAtStoreNum = 10;
+    private int juiceFromProviderNum;
 
-    private Product powderAtStore = new Powder("Порошок", 420.2);
-    private int powderAtStoreNum = 16;
+    private Product powderAtStore = new Powder();
+    private int powderAtStoreNum = 10;
+    private int powderFromProviderNum;
 
-    private Product soapAtStore = new Soap("Мыло", 50.4);
-    private int soapAtStoreNum = 17;
+    private Product soapAtStore = new Soap();
+    private int soapAtStoreNum = 10;
+    private int soapFromProviderNum;
 
 
     boolean bread = true; //provider brought bread = true
-    boolean milk = true;
-    boolean beer = true;
-    boolean juice = true;
-    boolean powder = true;
-    boolean soap = true;
+    boolean milk = false;
+    boolean beer = false;
+    boolean juice = false;
+    boolean powder = false;
+    boolean soap = false;
+
+    private Order order = new Order();
 
     public Product getBreadAtStore() {
         return breadAtStore;
@@ -135,135 +145,133 @@ public class Store {
     }
 
 
-    public String countProductsAtStore() {
-        if (breadAtStoreNum > 0) {
-            System.out.println("На складе есть " + breadAtStoreNum + " ед. " + breadAtStore.getNameOfProduct() + " по цене - " + breadAtStore.getPriceOfProduct() + " рублей.");
-
-        }
-
-        if (milkAtStoreNum > 0) {
-            System.out.println("На складе есть " + milkAtStoreNum + " ед. " + milkAtStore.getNameOfProduct() + " по цене - " + milkAtStore.getPriceOfProduct() + " рублей.");
-
-        }
-
-        if (beerAtStoreNum > 0) {
-            System.out.println("На складе есть " + beerAtStoreNum + " ед. " + beerAtStore.getNameOfProduct() + " по цене - " + beerAtStore.getPriceOfProduct() + " рублей.");
-
-
-        }
-
-        if (juiceAtStoreNum > 0) {
-            System.out.println("На складе есть " + juiceAtStoreNum + " ед. " + juiceAtStore.getNameOfProduct() + " по цене - " + juiceAtStore.getPriceOfProduct() + " рублей.");
-
-
-        }
-
-        if (powderAtStoreNum > 0) {
-            System.out.println("На складе есть " + powderAtStoreNum + " ед. " + powderAtStore.getNameOfProduct() + " по цене - " + powderAtStore.getPriceOfProduct() + " рублей.");
-
-
-        }
-
-        if (soapAtStoreNum > 0) {
-            System.out.println("На складе есть " + soapAtStoreNum + " ед. " + soapAtStore.getNameOfProduct() + " по цене - " + soapAtStore.getPriceOfProduct() + " рублей.");
-
-
-        }
-
-        return "Продукты посчитаны";
-    }
-
     public String getProductsFromProvider() {
 
         if (bread) {
-            Product breadFromProvider = new Bread();
-            breadFromProvider.setAmountOfProduct(1);
-            System.out.println("На склад привезли " + breadAtStore.getNameOfProduct() + " - " + breadFromProvider.getAmountOfProduct() + " ед.");
-            breadAtStoreNum++;
+
+            System.out.println("Привезли " + breadAtStore.getNameOfProduct() + ". " + "Введите количество: ");
+            Scanner a = new Scanner(System.in);
+            breadFromProviderNum = a.nextInt();
+            System.out.println("На склад добавили " + breadAtStore.getNameOfProduct() + " - " + breadFromProviderNum + " ед.");
+
         }
 
         if (milk) {
-            Product milkFromProvider = new Milk();
-            ;
-            milkFromProvider.setAmountOfProduct(1);
-            System.out.println("На склад привезли " + milkAtStore.getNameOfProduct() + " - " + milkFromProvider.getAmountOfProduct() + " ед.");
-            milkAtStoreNum++;
 
+            System.out.println("Привезли " + milkAtStore.getNameOfProduct() + ". " + "Введите количество: ");
+            Scanner a = new Scanner(System.in);
+            int milkFromProviderNum = a.nextInt();
+            System.out.println("На складе добавили " + milkAtStore.getNameOfProduct() + " - " + milkFromProviderNum + " ед.");
 
         }
 
         if (beer) {
-            Product beerFromProvider = new Beer();
-            beerFromProvider.setAmountOfProduct(1);
-            System.out.println("На склад привезли " + beerAtStore.getNameOfProduct() + " - " + beerFromProvider.getAmountOfProduct() + " ед.");
-            beerAtStoreNum++;
 
+            System.out.println("Привезли " + beerAtStore.getNameOfProduct() + ". " + "Введите количество: ");
+            Scanner a = new Scanner(System.in);
+            int beerFromProviderNum = a.nextInt();
+            System.out.println("На складе добавили " + beerAtStore.getNameOfProduct() + " - " + beerFromProviderNum + " ед.");
 
         }
 
         if (juice) {
-            Product juiceFromProvider = new Juice();
-            juiceFromProvider.setAmountOfProduct(1);
-            System.out.println("На склад привезли " + juiceAtStore.getNameOfProduct() + " - " + juiceFromProvider.getAmountOfProduct() + " ед.");
-            juiceAtStoreNum++;
 
+            System.out.println("Привезли " + juiceAtStore.getNameOfProduct() + ". " + "Введите количество: ");
+            Scanner a = new Scanner(System.in);
+            int juiceFromProviderNum = a.nextInt();
+            System.out.println("На складе добавили " + juiceAtStore.getNameOfProduct() + " - " + juiceFromProviderNum + " ед.");
 
         }
 
         if (powder) {
-            Product powderFromProvider = new Powder();
-            powderFromProvider.setAmountOfProduct(1);
-            System.out.println("На склад привезли " + powderAtStore.getNameOfProduct() + " - " + powderFromProvider.getAmountOfProduct() + " ед.");
-            powderAtStoreNum++;
+
+            System.out.println("Привезли " + powderAtStore.getNameOfProduct() + ". " + "Введите количество: ");
+            Scanner a = new Scanner(System.in);
+            int powderFromProviderNum = a.nextInt();
+            System.out.println("На складе добавили " + powderAtStore.getNameOfProduct() + " - " + powderFromProviderNum + " ед.");
 
 
         }
 
         if (soap) {
-            Product soapFromProvider = new Soap();
-            soapFromProvider.setPriceOfProduct(50.4);
-            soapFromProvider.setAmountOfProduct(1);
-            System.out.println("На склад привезли " + soapAtStore.getNameOfProduct() + " - " + soapFromProvider.getAmountOfProduct() + " ед.");
-            soapAtStoreNum++;
+
+            System.out.println("Привезли " + soapAtStore.getNameOfProduct() + ". " + "Введите количество: ");
+            Scanner a = new Scanner(System.in);
+            int soapFromProviderNum = a.nextInt();
+            System.out.println("На складе добавили " + soapAtStore.getNameOfProduct() + " - " + soapFromProviderNum + " ед.");
 
 
         }
 
-        return "На складе стало " + breadAtStoreNum + " ед. " + breadAtStore.getNameOfProduct() + "\n" +
-                "На складе стало " + milkAtStoreNum + " ед. " + milkAtStore.getNameOfProduct() + "\n" +
-                "На складе стало " + beerAtStoreNum + " ед. " + beerAtStore.getNameOfProduct() + "\n" +
-                "На складе стало " + juiceAtStoreNum + " ед. " + juiceAtStore.getNameOfProduct() + "\n" +
-                "На складе стало " + powderAtStoreNum + " ед. " + powderAtStore.getNameOfProduct() + "\n" +
-                "На складе стало " + soapAtStoreNum + " ед. " + soapAtStore.getNameOfProduct();
+        return "Завоз окончен" + "\n";
 
 
     }
-    /*private Order order = new Order();
+
+    public String countProductsAtStore() {
+        System.out.println("На складе есть: ");
+
+        if (breadAtStoreNum+breadFromProviderNum > 0) {
+            System.out.println((breadAtStoreNum+breadFromProviderNum) + " ед. " + breadAtStore.getNameOfProduct() + " по цене - " + breadAtStore.getPriceOfProduct() + " рублей.");
+        }
+
+        if (milkAtStoreNum+milkFromProviderNum > 0) {
+            System.out.println((milkAtStoreNum+milkFromProviderNum) + " ед. " + milkAtStore.getNameOfProduct() + " по цене - " + milkAtStore.getPriceOfProduct() + " рублей.");
+
+        }
+
+        if (beerAtStoreNum+beerFromProviderNum > 0) {
+            System.out.println((beerAtStoreNum+beerFromProviderNum) + " ед. " + beerAtStore.getNameOfProduct() + " по цене - " + beerAtStore.getPriceOfProduct() + " рублей.");
+
+
+        }
+
+        if (juiceAtStoreNum+juiceFromProviderNum > 0) {
+            System.out.println((juiceAtStoreNum+juiceFromProviderNum) + " ед. " + juiceAtStore.getNameOfProduct() + " по цене - " + juiceAtStore.getPriceOfProduct() + " рублей.");
+
+
+        }
+
+        if (powderAtStoreNum+powderFromProviderNum > 0) {
+            System.out.println((powderAtStoreNum+powderFromProviderNum) + " ед. " + powderAtStore.getNameOfProduct() + " по цене - " + powderAtStore.getPriceOfProduct() + " рублей.");
+
+
+        }
+
+        if (soapAtStoreNum+soapFromProviderNum > 0) {
+            System.out.println((soapAtStoreNum+soapFromProviderNum) + " ед. " + soapAtStore.getNameOfProduct() + " по цене - " + soapAtStore.getPriceOfProduct() + " рублей.");
+
+
+        }
+
+        return "Продукты посчитаны" + "\n";
+    }
+
 
     public String countExistProductsAtStore() {
 
-        breadAtStoreNum = breadAtStoreNum - order.getBreadAtOrderNum();
-        System.out.println("На складе осталось " + breadAtStoreNum + breadAtStore.getNameOfProduct());
+        breadAtStoreNum = breadAtStoreNum+breadFromProviderNum - order.getBreadAtOrderNum();
+        System.out.println("На складе осталось " + breadAtStoreNum + " " + breadAtStore.getNameOfProduct());
 
-        milkAtStoreNum = milkAtStoreNum - order.getMilkAtOrderNum();
-        System.out.println("На складе осталось " + milkAtStoreNum + milkAtStore.getNameOfProduct());
+        milkAtStoreNum = milkAtStoreNum+milkFromProviderNum - order.getMilkAtOrderNum();
+        System.out.println("На складе осталось " + milkAtStoreNum + " " + milkAtStore.getNameOfProduct());
 
-        beerAtStoreNum = beerAtStoreNum - order.getBeerAtOrderNum();
-        System.out.println("На складе осталось " + beerAtStoreNum + beerAtStore.getNameOfProduct());
+        beerAtStoreNum = beerAtStoreNum+beerFromProviderNum - order.getBeerAtOrderNum();
+        System.out.println("На складе осталось " + beerAtStoreNum + " " + beerAtStore.getNameOfProduct());
 
-        juiceAtStoreNum = juiceAtStoreNum - order.getJuiceAtOrderNum();
-        System.out.println("На складе осталось " + juiceAtStoreNum + juiceAtStore.getNameOfProduct());
+        juiceAtStoreNum = juiceAtStoreNum+juiceFromProviderNum - order.getJuiceAtOrderNum();
+        System.out.println("На складе осталось " + juiceAtStoreNum + " " + juiceAtStore.getNameOfProduct());
 
-        powderAtStoreNum = powderAtStoreNum - order.getPowderAtOrderNum();
-        System.out.println("На складе осталось " + powderAtStoreNum + powderAtStore.getNameOfProduct());
+        powderAtStoreNum = powderAtStoreNum+powderFromProviderNum - order.getPowderAtOrderNum();
+        System.out.println("На складе осталось " + powderAtStoreNum + " " + powderAtStore.getNameOfProduct());
 
-        soapAtStoreNum = soapAtStoreNum - order.getSoapAtOrderNum();
-        System.out.println("На складе осталось " + soapAtStoreNum + soapAtStore.getNameOfProduct());
+        soapAtStoreNum = soapAtStoreNum+soapFromProviderNum - order.getSoapAtOrderNum();
+        System.out.println("На складе осталось " + soapAtStoreNum + " " + soapAtStore.getNameOfProduct());
 
-        return "Продукты посчитаны";
+        return "Остатки посчитаны" + "\n";
 
 
-    }*/
+    }
 
     public void formBasketFromOrder() {
 

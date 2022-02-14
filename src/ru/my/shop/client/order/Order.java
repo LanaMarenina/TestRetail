@@ -1,18 +1,45 @@
 package ru.my.shop.client.order;
 
-import ru.my.shop.store.Store;
+import org.w3c.dom.ls.LSOutput;
+import ru.my.shop.store.Products.Chemical.Powder;
+import ru.my.shop.store.Products.Chemical.Soap;
+import ru.my.shop.store.Products.Drink.Beer;
+import ru.my.shop.store.Products.Drink.Juice;
+import ru.my.shop.store.Products.Food.Bread;
+import ru.my.shop.store.Products.Food.Milk;
+
+
 import java.util.Scanner;
 
 public class Order {
 
-    private int breadAtOrderNum = 0;
-    private int milkAtOrderNum = 0;
-    private int beerAtOrderNum = 0;
-    private int juiceAtOrderNum = 0;
-    private int soapAtOrderNum = 0;
-    private int powderAtOrderNum = 0;
+    private static int breadAtOrderNum = 0;
+    private static int milkAtOrderNum = 0;
+    private static int beerAtOrderNum = 0;
+    private static int juiceAtOrderNum = 0;
+    private static int soapAtOrderNum = 0;
+    private static int powderAtOrderNum = 0;
 
+    private Bread bread = new Bread();
+    private Milk milk = new Milk();
+    private Beer beer = new Beer();
+    private Juice juice = new Juice();
+    private Powder powder = new Powder();
+    private Soap soap = new Soap();
 
+    private String breadAtOrderName = bread.getNameOfProduct();
+    private String milkAtOrderName = milk.getNameOfProduct();
+    private String beerAtOrderName = beer.getNameOfProduct();
+    private String juiceAtOrderName = juice.getNameOfProduct();
+    private String powderAtOrderName = powder.getNameOfProduct();
+    private String soapAtOrderName = soap.getNameOfProduct();
+
+    boolean clientCheckedBread = true;
+    boolean clientCheckedMilk = true;
+    boolean clientCheckedBeer = false;
+    boolean clientCheckedJuice = false;
+    boolean clientCheckedSoap = false;
+    boolean clientCheckedPowder = false;
 
     public Order(int breadAtOrderNum, int milkAtOrderNum, int beerAtOrderNum, int juiceAtOrderNum, int soapAtOrderNum, int powderAtOrderNum) {
         this.breadAtOrderNum = breadAtOrderNum;
@@ -26,13 +53,6 @@ public class Order {
     public Order() {
 
     }
-
-    boolean clientCheckedBread = true;
-    boolean clientCheckedMilk = true;
-    boolean clientCheckedBeer = false;
-    boolean clientCheckedJuice = false;
-    boolean clientCheckedSoap = true;
-    boolean clientCheckedPowder = true;
 
 
     public int getBreadAtOrderNum() {
@@ -83,14 +103,6 @@ public class Order {
         this.powderAtOrderNum = powderAtOrderNum;
     }
 
-    private Store store = new Store();
-
-    private String breadAtOrderName = store.getBreadAtStore().getNameOfProduct();
-    private String milkAtOrderName = store.getMilkAtStore().getNameOfProduct();
-    private String beerAtOrderName = store.getBeerAtStore().getNameOfProduct();
-    private String juiceAtOrderName = store.getJuiceAtStore().getNameOfProduct();
-    private String powderAtOrderName = store.getPowderAtStore().getNameOfProduct();
-    private String soapAtOrderName = store.getSoapAtStore().getNameOfProduct();
 
     public String getBreadAtOrderName() {
         return breadAtOrderName;
@@ -191,10 +203,7 @@ public class Order {
 
         }
 
-
-        return "Заказ сформирован";
-
-
+        return "0";
     }
 
     public void giveIdToOrder() {
@@ -202,48 +211,45 @@ public class Order {
 
     }
 
-    public String showOrderToClient() {
+    public void finalOrder() {
 
         if (breadAtOrderNum > 0) {
 
-            System.out.println(breadAtOrderNum + " " + store.getBreadAtStore().getNameOfProduct() + " - " + breadAtOrderNum * store.getBreadAtStore().getPriceOfProduct() + " рублей");
+            System.out.println(breadAtOrderNum + " " + breadAtOrderName + " - " + breadAtOrderNum * bread.getPriceOfProduct() + " рублей");
 
         }
 
         if (milkAtOrderNum > 0) {
 
-            System.out.println(milkAtOrderNum + " " + store.getMilkAtStore().getNameOfProduct() + " - " + milkAtOrderNum * store.getMilkAtStore().getPriceOfProduct() + " рублей");
+            System.out.println(milkAtOrderNum + " " + milkAtOrderName + " - " + milkAtOrderNum * milk.getPriceOfProduct() + " рублей");
 
         }
 
         if (beerAtOrderNum > 0) {
 
-            System.out.println(beerAtOrderNum + " " + store.getBeerAtStore().getNameOfProduct() + " - " + beerAtOrderNum * store.getBeerAtStore().getPriceOfProduct() + " рублей");
+            System.out.println(beerAtOrderNum + " " + beerAtOrderName + " - " + beerAtOrderNum * beer.getPriceOfProduct() + " рублей");
 
         }
 
         if (juiceAtOrderNum > 0) {
 
-            System.out.println(juiceAtOrderNum + " " + store.getJuiceAtStore().getNameOfProduct() + " - " + juiceAtOrderNum * store.getJuiceAtStore().getPriceOfProduct() + " рублей");
+            System.out.println(juiceAtOrderNum + " " + juiceAtOrderName + " - " + juiceAtOrderNum * juice.getPriceOfProduct() + " рублей");
 
         }
 
         if (powderAtOrderNum > 0) {
 
-            System.out.println(powderAtOrderNum + " " + store.getPowderAtStore().getNameOfProduct() + " - " + powderAtOrderNum * store.getPowderAtStore().getPriceOfProduct() + " рублей");
+            System.out.println(powderAtOrderNum + " " + powderAtOrderName + " - " + powderAtOrderNum * powder.getPriceOfProduct() + " рублей");
 
         }
 
         if (soapAtOrderNum > 0) {
 
-            System.out.println(soapAtOrderNum + " " + store.getSoapAtStore().getNameOfProduct() + " - " + soapAtOrderNum * store.getSoapAtStore().getPriceOfProduct() + " рублей");
+            System.out.println(soapAtOrderNum + " " + soapAtOrderName + " - " + soapAtOrderNum * soap.getPriceOfProduct() + " рублей");
 
         }
 
-        return "Итого: " + (breadAtOrderNum * store.getBreadAtStore().getPriceOfProduct() + milkAtOrderNum * store.getMilkAtStore().getPriceOfProduct() + beerAtOrderNum * store.getBeerAtStore().getPriceOfProduct() + powderAtOrderNum * store.getPowderAtStore().getPriceOfProduct() + soapAtOrderNum * store.getSoapAtStore().getPriceOfProduct()) + " рублей";
-
     }
-
 
 
 

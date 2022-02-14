@@ -2,15 +2,15 @@ package ru.my.shop.store.Products.Drink;
 
 public class Alcohol extends Drink {
 
-    private double percentOfAlcohol;
+    private float percentOfAlcohol;
 
-    public Alcohol(String nameOfProduct, double amountOfProduct, double priceOfProduct, String composition, double volume, double percentOfAlcohol) {
+    public Alcohol(String nameOfProduct, float amountOfProduct, float priceOfProduct, String composition, float volume, float percentOfAlcohol) {
         super(nameOfProduct, amountOfProduct, priceOfProduct, composition, volume);
         this.percentOfAlcohol = percentOfAlcohol;
     }
 
-    public Alcohol(String nameOfProduct, double priceOfProduct) {
-        super(nameOfProduct, priceOfProduct);
+    public Alcohol(float priceOfProduct) {
+        super(priceOfProduct);
     }
 
     public Alcohol() {

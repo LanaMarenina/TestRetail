@@ -13,26 +13,9 @@ public class Receipt {
     private Client client = new Client();
     private Order order = new Order();
 
-    private int breadFromOrderNum = order.getBreadAtOrderNum();
-    private String breadFromOrderName = order.getBreadAtOrderName();
-
-    private int milkFromOrderNum = order.getMilkAtOrderNum();
-    private String milkFromOrderName = order.getMilkAtOrderName();
-
-    private int beerFromOrderNum = order.getBeerAtOrderNum();
-    private String beerFromOrderName = order.getBeerAtOrderName();
-
-    private int juiceFromOrderNum = order.getJuiceAtOrderNum();
-    private String juiceFromOrderName = order.getJuiceAtOrderName();
-
-    private int soapFromOrderNum = order.getSoapAtOrderNum();
-    private String soapFromOrderName = order.getSoapAtOrderName();
-
-    private int powderFromOrderNum = order.getPowderAtOrderNum();
-    private String powderFromOrderName = order.getPowderAtOrderName();
-
 
     public void printReceipt() {
+
 
         System.out.println("Информация о платеже:" + "\n" +
                 "Название магазина - " + shop.getNameOfShop() + "\n" +
@@ -40,32 +23,26 @@ public class Receipt {
                 "Имя клиента - " + client.getNameOfClient() + "\n" +
                 "Адрес клиента - " + client.getAddressOfClient() + "\n" +
                 "Телефон клиента - " + client.getPhoneOfClient() + "\n" +
-                "Заказ клиента: " + "\n");
+                "Заказ клиента: ");
 
-        if (breadFromOrderNum > 0) {
-            System.out.println(breadFromOrderNum + " " + breadFromOrderName + "\n");
+        if (order.getBreadAtOrderNum() > 0) {
+            System.out.println(order.getBreadAtOrderNum() + " " + order.getBreadAtOrderName());
         }
-
-        if (milkFromOrderNum > 0) {
-            System.out.println(milkFromOrderNum + " " + milkFromOrderName + "\n");
+        if (order.getMilkAtOrderNum() > 0) {
+            System.out.println(order.getMilkAtOrderNum() + " " + order.getMilkAtOrderName());
         }
-
-        if (beerFromOrderNum > 0) {
-            System.out.println(beerFromOrderNum + " " + beerFromOrderName + "\n");
+        if (order.getBeerAtOrderNum() > 0) {
+            System.out.println(order.getBeerAtOrderNum() + " " + order.getBeerAtOrderName());
         }
-
-        if (juiceFromOrderNum > 0) {
-            System.out.println(juiceFromOrderNum + " " + juiceFromOrderName + "\n");
+        if (order.getJuiceAtOrderNum() > 0) {
+            System.out.println(order.getJuiceAtOrderNum() + " " + order.getJuiceAtOrderName());
         }
-
-        if (powderFromOrderNum > 0) {
-            System.out.println(powderFromOrderNum + " " + powderFromOrderName + "\n");
+        if (order.getPowderAtOrderNum() > 0) {
+            System.out.println(order.getPowderAtOrderNum() + " " + order.getPowderAtOrderName());
         }
-
-        if (soapFromOrderNum > 0) {
-            System.out.println(soapFromOrderNum + " " + soapFromOrderName + "\n");
+        if (order.getSoapAtOrderNum() > 0) {
+            System.out.println(order.getSoapAtOrderNum() + " " + order.getSoapAtOrderName());
         }
-
     }
 
 }

@@ -2,21 +2,21 @@ package ru.my.shop.store.Products;
 
 import java.time.LocalDateTime;
 
-public class Product {
+public abstract class Product {
 
     private String nameOfProduct;
-    private double amountOfProduct;
-    private double priceOfProduct;
+    private float amountOfProduct;
+    private float priceOfProduct;
     private LocalDateTime dateOfUse;
 
-    public Product(String nameOfProduct, double amountOfProduct, double priceOfProduct) {
+    public Product(String nameOfProduct, float amountOfProduct, float priceOfProduct) {
         this.nameOfProduct = nameOfProduct;
         this.amountOfProduct = amountOfProduct;
         this.priceOfProduct = priceOfProduct;
     }
 
-    public Product(String nameOfProduct, double priceOfProduct) {
-        this.nameOfProduct = nameOfProduct;
+
+    public Product(float priceOfProduct) {
         this.priceOfProduct = priceOfProduct;
     }
 
@@ -31,19 +31,19 @@ public class Product {
         this.nameOfProduct = nameOfProduct;
     }
 
-    public double getAmountOfProduct() {
+    public float getAmountOfProduct() {
         return amountOfProduct;
     }
 
-    public void setAmountOfProduct(double amountOfProduct) {
+    public void setAmountOfProduct(float amountOfProduct) {
         this.amountOfProduct = amountOfProduct;
     }
 
-    public double getPriceOfProduct() {
+    public float getPriceOfProduct() {
         return priceOfProduct;
     }
 
-    public void setPriceOfProduct(double priceOfProduct) {
+    public void setPriceOfProduct(float priceOfProduct) {
         this.priceOfProduct = priceOfProduct;
     }
 }

@@ -5,16 +5,16 @@ import ru.my.shop.store.Products.Product;
 public class Drink extends Product {
 
     private String composition;
-    private double volume;
+    private float volume;
 
-    public Drink(String nameOfProduct, double amountOfProduct, double priceOfProduct, String composition, double volume) {
+    public Drink(String nameOfProduct, float amountOfProduct, float priceOfProduct, String composition, float volume) {
         super(nameOfProduct, amountOfProduct, priceOfProduct);
         this.composition = composition;
         this.volume = volume;
     }
 
-    public Drink(String nameOfProduct, double priceOfProduct) {
-        super(nameOfProduct, priceOfProduct);
+    public Drink(float priceOfProduct) {
+        super(priceOfProduct);
     }
 
     public Drink() {
@@ -28,11 +28,11 @@ public class Drink extends Product {
         this.composition = composition;
     }
 
-    public double getVolume() {
+    public float getVolume() {
         return volume;
     }
 
-    public void setVolume(double volume) {
+    public void setVolume(float volume) {
         this.volume = volume;
     }
 }

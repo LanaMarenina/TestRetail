@@ -2,18 +2,19 @@ package ru.my.shop.store.Products.Food;
 
 public class Bakery extends Food {
 
-    private double weight;
+    private float weight;
 
-    public Bakery(String nameOfProduct, double amountOfProduct, double priceOfProduct, String composition, double weight) {
+    public Bakery(String nameOfProduct, float amountOfProduct, float priceOfProduct, String composition, float weight) {
         super(nameOfProduct, amountOfProduct, priceOfProduct, composition);
-        this.weight = weight;
+        this.weight = (float) weight;
     }
 
-    public Bakery(String nameOfProduct, double priceOfProduct) {
-        super(nameOfProduct, priceOfProduct);
+    public Bakery(float priceOfProduct) {
+        super(priceOfProduct);
     }
 
     public Bakery() {
     }
+
 
 }
