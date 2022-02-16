@@ -160,7 +160,7 @@ public class Store {
 
             System.out.println("Привезли " + milkAtStore.getNameOfProduct() + ". " + "Введите количество: ");
             Scanner a = new Scanner(System.in);
-            int milkFromProviderNum = a.nextInt();
+            milkFromProviderNum = a.nextInt();
             System.out.println("На складе добавили " + milkAtStore.getNameOfProduct() + " - " + milkFromProviderNum + " ед.");
 
         }
@@ -169,7 +169,7 @@ public class Store {
 
             System.out.println("Привезли " + beerAtStore.getNameOfProduct() + ". " + "Введите количество: ");
             Scanner a = new Scanner(System.in);
-            int beerFromProviderNum = a.nextInt();
+            beerFromProviderNum = a.nextInt();
             System.out.println("На складе добавили " + beerAtStore.getNameOfProduct() + " - " + beerFromProviderNum + " ед.");
 
         }
@@ -178,7 +178,7 @@ public class Store {
 
             System.out.println("Привезли " + juiceAtStore.getNameOfProduct() + ". " + "Введите количество: ");
             Scanner a = new Scanner(System.in);
-            int juiceFromProviderNum = a.nextInt();
+            juiceFromProviderNum = a.nextInt();
             System.out.println("На складе добавили " + juiceAtStore.getNameOfProduct() + " - " + juiceFromProviderNum + " ед.");
 
         }
@@ -187,7 +187,7 @@ public class Store {
 
             System.out.println("Привезли " + powderAtStore.getNameOfProduct() + ". " + "Введите количество: ");
             Scanner a = new Scanner(System.in);
-            int powderFromProviderNum = a.nextInt();
+            powderFromProviderNum = a.nextInt();
             System.out.println("На складе добавили " + powderAtStore.getNameOfProduct() + " - " + powderFromProviderNum + " ед.");
 
 
@@ -197,7 +197,7 @@ public class Store {
 
             System.out.println("Привезли " + soapAtStore.getNameOfProduct() + ". " + "Введите количество: ");
             Scanner a = new Scanner(System.in);
-            int soapFromProviderNum = a.nextInt();
+            soapFromProviderNum = a.nextInt();
             System.out.println("На складе добавили " + soapAtStore.getNameOfProduct() + " - " + soapFromProviderNum + " ед.");
 
 

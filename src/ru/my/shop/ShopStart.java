@@ -1,7 +1,6 @@
 package ru.my.shop;
 
 import ru.my.shop.client.order.Client;
-import ru.my.shop.client.order.Order;
 import ru.my.shop.payment.Receipt;
 import ru.my.shop.store.Store;
 
@@ -15,6 +14,7 @@ public class ShopStart {
         client.openTheWeb();
         client.chooseProductsAtWeb();
         client.lookMyOrderAtWeb();
+        client.payForOrder();
 
         Store store = new Store();
         System.out.println(store.getProductsFromProvider());

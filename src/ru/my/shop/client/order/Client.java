@@ -2,12 +2,12 @@ package ru.my.shop.client.order;
 
 import ru.my.shop.store.Web;
 
+
 public class Client {
 
     private String nameOfClient = "Морозова Лена";
     private String addressOfClient = "Москва, ул. Строителей, 123";
     private String phoneOfClient = "8-900-123-45-67";
-    private int cardNumber;
     private Web web = new Web();
 
 
@@ -71,8 +71,11 @@ public class Client {
 
     public void payForOrder() {
 
+        web.clientIsReadyToPay();
+
 
     }
+
 
     public void chooseDelivery() {
 

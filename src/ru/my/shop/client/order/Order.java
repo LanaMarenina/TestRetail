@@ -1,6 +1,5 @@
 package ru.my.shop.client.order;
 
-import org.w3c.dom.ls.LSOutput;
 import ru.my.shop.store.Products.Chemical.Powder;
 import ru.my.shop.store.Products.Chemical.Soap;
 import ru.my.shop.store.Products.Drink.Beer;

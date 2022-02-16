@@ -3,6 +3,7 @@ package ru.my.shop.payment;
 import ru.my.shop.Shop;
 import ru.my.shop.client.order.Client;
 import ru.my.shop.client.order.Order;
+import ru.my.shop.store.Store;
 
 import java.time.LocalDateTime;
 
@@ -12,6 +13,7 @@ public class Receipt {
     private Shop shop = new Shop();
     private Client client = new Client();
     private Order order = new Order();
+    private Store store = new Store();
 
 
     public void printReceipt() {
@@ -43,6 +45,8 @@ public class Receipt {
         if (order.getSoapAtOrderNum() > 0) {
             System.out.println(order.getSoapAtOrderNum() + " " + order.getSoapAtOrderName());
         }
+
+        System.out.println("Оплачено " + (order.getBreadAtOrderNum() * store.getBreadAtStore().getPriceOfProduct() + order.getMilkAtOrderNum() * store.getMilkAtStore().getPriceOfProduct() + order.getBeerAtOrderNum() * store.getBeerAtStore().getPriceOfProduct() + order.getPowderAtOrderNum() * store.getPowderAtStore().getPriceOfProduct() + order.getSoapAtOrderNum() * store.getSoapAtStore().getPriceOfProduct()) + " рублей");
     }
 
 }

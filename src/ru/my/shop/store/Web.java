@@ -2,6 +2,7 @@ package ru.my.shop.store;
 
 
 import ru.my.shop.client.order.Order;
+import ru.my.shop.payment.Pay;
 
 public class Web {
 
@@ -9,6 +10,7 @@ public class Web {
     private String webAddress;
     private Store store = new Store();
     private Order order = new Order();
+    private Pay pay = new Pay();
 
     public void showExistProductsFromStore() {
 
@@ -32,10 +34,17 @@ public class Web {
     public String showOrderToClient() {
 
         order.finalOrder();
-        return "Итого: " + (order.getBreadAtOrderNum() * store.getBreadAtStore().getPriceOfProduct() + order.getMilkAtOrderNum() * store.getMilkAtStore().getPriceOfProduct() + order.getBeerAtOrderNum() * store.getBeerAtStore().getPriceOfProduct() + order.getPowderAtOrderNum() * store.getPowderAtStore().getPriceOfProduct() + order.getSoapAtOrderNum() * store.getSoapAtStore().getPriceOfProduct()) + " рублей" + "\n" ;
+        return "Итого: " + (order.getBreadAtOrderNum() * store.getBreadAtStore().getPriceOfProduct() + order.getMilkAtOrderNum() * store.getMilkAtStore().getPriceOfProduct() + order.getBeerAtOrderNum() * store.getBeerAtStore().getPriceOfProduct() + order.getPowderAtOrderNum() * store.getPowderAtStore().getPriceOfProduct() + order.getSoapAtOrderNum() * store.getSoapAtStore().getPriceOfProduct()) + " рублей" + "\n";
 
 
     }
 
 
+    public void clientIsReadyToPay() {
+
+        System.out.println("К оплате " + (order.getBreadAtOrderNum() * store.getBreadAtStore().getPriceOfProduct() + order.getMilkAtOrderNum() * store.getMilkAtStore().getPriceOfProduct() + order.getBeerAtOrderNum() * store.getBeerAtStore().getPriceOfProduct() + order.getPowderAtOrderNum() * store.getPowderAtStore().getPriceOfProduct() + order.getSoapAtOrderNum() * store.getSoapAtStore().getPriceOfProduct()) + " рублей");
+        pay.getMoneyFromClient();
+
+    }
 }
+
