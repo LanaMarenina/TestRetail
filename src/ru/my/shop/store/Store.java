@@ -161,7 +161,7 @@ public class Store {
             System.out.println("Привезли " + milkAtStore.getNameOfProduct() + ". " + "Введите количество: ");
             Scanner a = new Scanner(System.in);
             milkFromProviderNum = a.nextInt();
-            System.out.println("На складе добавили " + milkAtStore.getNameOfProduct() + " - " + milkFromProviderNum + " ед.");
+            System.out.println("На склад добавили " + milkAtStore.getNameOfProduct() + " - " + milkFromProviderNum + " ед.");
 
         }
 
@@ -170,7 +170,7 @@ public class Store {
             System.out.println("Привезли " + beerAtStore.getNameOfProduct() + ". " + "Введите количество: ");
             Scanner a = new Scanner(System.in);
             beerFromProviderNum = a.nextInt();
-            System.out.println("На складе добавили " + beerAtStore.getNameOfProduct() + " - " + beerFromProviderNum + " ед.");
+            System.out.println("На склад добавили " + beerAtStore.getNameOfProduct() + " - " + beerFromProviderNum + " ед.");
 
         }
 
@@ -179,7 +179,7 @@ public class Store {
             System.out.println("Привезли " + juiceAtStore.getNameOfProduct() + ". " + "Введите количество: ");
             Scanner a = new Scanner(System.in);
             juiceFromProviderNum = a.nextInt();
-            System.out.println("На складе добавили " + juiceAtStore.getNameOfProduct() + " - " + juiceFromProviderNum + " ед.");
+            System.out.println("На склад добавили " + juiceAtStore.getNameOfProduct() + " - " + juiceFromProviderNum + " ед.");
 
         }
 
@@ -188,7 +188,7 @@ public class Store {
             System.out.println("Привезли " + powderAtStore.getNameOfProduct() + ". " + "Введите количество: ");
             Scanner a = new Scanner(System.in);
             powderFromProviderNum = a.nextInt();
-            System.out.println("На складе добавили " + powderAtStore.getNameOfProduct() + " - " + powderFromProviderNum + " ед.");
+            System.out.println("На склад добавили " + powderAtStore.getNameOfProduct() + " - " + powderFromProviderNum + " ед.");
 
 
         }
@@ -198,7 +198,7 @@ public class Store {
             System.out.println("Привезли " + soapAtStore.getNameOfProduct() + ". " + "Введите количество: ");
             Scanner a = new Scanner(System.in);
             soapFromProviderNum = a.nextInt();
-            System.out.println("На складе добавили " + soapAtStore.getNameOfProduct() + " - " + soapFromProviderNum + " ед.");
+            System.out.println("На склад добавили " + soapAtStore.getNameOfProduct() + " - " + soapFromProviderNum + " ед.");
 
 
         }

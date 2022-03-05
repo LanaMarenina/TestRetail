@@ -24,7 +24,6 @@ public class ShopStart {
         Receipt receipt = new Receipt();
         receipt.printReceipt();
 
-
     }
 
 

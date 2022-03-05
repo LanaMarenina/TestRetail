@@ -33,10 +33,10 @@ public class Order {
     private String powderAtOrderName = powder.getNameOfProduct();
     private String soapAtOrderName = soap.getNameOfProduct();
 
-    boolean clientCheckedBread = true;
-    boolean clientCheckedMilk = true;
-    boolean clientCheckedBeer = false;
-    boolean clientCheckedJuice = false;
+    boolean clientCheckedBread = false;
+    boolean clientCheckedMilk = false;
+    boolean clientCheckedBeer = true;
+    boolean clientCheckedJuice = true;
     boolean clientCheckedSoap = false;
     boolean clientCheckedPowder = false;
 
@@ -171,10 +171,21 @@ public class Order {
         }
 
         if (clientCheckedBeer) {
-            System.out.println("Вы выбрали " + beerAtOrderName + ". " + "Введите количество: ");
-            Scanner a = new Scanner(System.in);
-            beerAtOrderNum = a.nextInt();
-            System.out.println("В корзину добавили " + beerAtOrderNum + " " + beerAtOrderName);
+            System.out.println("Вы выбрали " + beerAtOrderName + ". " + "Введите ваш возраст: ");
+            Scanner b = new Scanner(System.in);
+            byte age = b.nextByte();
+            if (age >= 21 && age < 100) {
+                System.out.println("Введите количество " + beerAtOrderName + ": ");
+                Scanner a = new Scanner(System.in);
+                beerAtOrderNum = a.nextInt();
+                System.out.println("В корзину добавили " + beerAtOrderNum + " " + beerAtOrderName);
+
+            } else if (age < 21) {
+                System.out.println("Продажа алкоголя несовершеннолетним запрещена");
+            } else {
+                System.out.println("Возраст введён неверно");
+            }
+
 
         }
 
@@ -183,7 +194,6 @@ public class Order {
             Scanner a = new Scanner(System.in);
             juiceAtOrderNum = a.nextInt();
             System.out.println("В корзину добавили " + juiceAtOrderNum + " " + juiceAtOrderName);
-
         }
 
         if (clientCheckedPowder) {
@@ -249,8 +259,6 @@ public class Order {
         }
 
     }
-
-
 
 
 }
