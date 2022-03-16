@@ -18,16 +18,8 @@ public class Shop {
         return nameOfShop;
     }
 
-    public void setNameOfShop(String nameOfShop) {
-        this.nameOfShop = nameOfShop;
-    }
-
     public String getAddressOfShop() {
         return addressOfShop;
-    }
-
-    public void setAddressOfShop(String addressOfShop) {
-        this.addressOfShop = addressOfShop;
     }
 
 }

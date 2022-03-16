@@ -1,10 +1,11 @@
 package ru.my.shop.delivery;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Basket {
 
-    private String material;
-    private LocalDateTime dateOfDelivery;
+
+        private String material;
+        private Date currentDate = new Date ();
 
 }

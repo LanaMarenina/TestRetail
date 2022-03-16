@@ -40,15 +40,6 @@ public class Order {
     boolean clientCheckedSoap = false;
     boolean clientCheckedPowder = false;
 
-    public Order(int breadAtOrderNum, int milkAtOrderNum, int beerAtOrderNum, int juiceAtOrderNum, int soapAtOrderNum, int powderAtOrderNum) {
-        this.breadAtOrderNum = breadAtOrderNum;
-        this.milkAtOrderNum = milkAtOrderNum;
-        this.beerAtOrderNum = beerAtOrderNum;
-        this.juiceAtOrderNum = juiceAtOrderNum;
-        this.soapAtOrderNum = soapAtOrderNum;
-        this.powderAtOrderNum = powderAtOrderNum;
-    }
-
     public Order() {
 
     }
@@ -58,97 +49,48 @@ public class Order {
         return breadAtOrderNum;
     }
 
-    public void setBreadAtOrderNum(int breadAtOrderNum) {
-        this.breadAtOrderNum = breadAtOrderNum;
-    }
-
     public int getMilkAtOrderNum() {
         return milkAtOrderNum;
-    }
-
-    public void setMilkAtOrderNum(int milkAtOrderNum) {
-        this.milkAtOrderNum = milkAtOrderNum;
     }
 
     public int getBeerAtOrderNum() {
         return beerAtOrderNum;
     }
 
-    public void setBeerAtOrderNum(int beerAtOrderNum) {
-        this.beerAtOrderNum = beerAtOrderNum;
-    }
-
     public int getJuiceAtOrderNum() {
         return juiceAtOrderNum;
-    }
-
-    public void setJuiceAtOrderNum(int juiceAtOrderNum) {
-        this.juiceAtOrderNum = juiceAtOrderNum;
     }
 
     public int getSoapAtOrderNum() {
         return soapAtOrderNum;
     }
 
-    public void setSoapAtOrderNum(int soapAtOrderNum) {
-        this.soapAtOrderNum = soapAtOrderNum;
-    }
-
     public int getPowderAtOrderNum() {
         return powderAtOrderNum;
     }
 
-    public void setPowderAtOrderNum(int powderAtOrderNum) {
-        this.powderAtOrderNum = powderAtOrderNum;
-    }
-
-
     public String getBreadAtOrderName() {
         return breadAtOrderName;
-    }
-
-    public void setBreadAtOrderName(String breadAtOrderName) {
-        this.breadAtOrderName = breadAtOrderName;
     }
 
     public String getMilkAtOrderName() {
         return milkAtOrderName;
     }
 
-    public void setMilkAtOrderName(String milkAtOrderName) {
-        this.milkAtOrderName = milkAtOrderName;
-    }
-
     public String getBeerAtOrderName() {
         return beerAtOrderName;
-    }
-
-    public void setBeerAtOrderName(String beerAtOrderName) {
-        this.beerAtOrderName = beerAtOrderName;
     }
 
     public String getJuiceAtOrderName() {
         return juiceAtOrderName;
     }
 
-    public void setJuiceAtOrderName(String juiceAtOrderName) {
-        this.juiceAtOrderName = juiceAtOrderName;
-    }
-
     public String getPowderAtOrderName() {
         return powderAtOrderName;
     }
 
-    public void setPowderAtOrderName(String powderAtOrderName) {
-        this.powderAtOrderName = powderAtOrderName;
-    }
-
     public String getSoapAtOrderName() {
         return soapAtOrderName;
-    }
-
-    public void setSoapAtOrderName(String soapAtOrderName) {
-        this.soapAtOrderName = soapAtOrderName;
     }
 
     public String formOrder() {
@@ -213,11 +155,6 @@ public class Order {
         }
 
         return "0";
-    }
-
-    public void giveIdToOrder() {
-
-
     }
 
     public void finalOrder() {
