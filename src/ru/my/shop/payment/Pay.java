@@ -18,18 +18,18 @@ public class Pay {
         }
         if (cardNumber.length == 16) {
             if (cardNumber[0] == '2') {
-                System.out.println("Платёжная система МИР. Карта принята");
+                System.out.println("Платёжная система МИР. Карта принята" + "\n");
 
             } else if (cardNumber[0] == '4') {
-                System.out.println("Платёжная система VISA. Карта принята");
+                System.out.println("Платёжная система VISA. Карта принята" + "\n");
             } else if (cardNumber[0] == '5') {
-                System.out.println("Платёжная система MasterCard. Карта принята");
+                System.out.println("Платёжная система MasterCard. Карта принята" + "\n");
             } else if (cardNumber[0] == '6') {
-                System.out.println("Платёжная система Maestro. Карта принята");
+                System.out.println("Платёжная система Maestro. Карта принята" + "\n");
             } else
-                System.out.println("Ваша карта не принимается. Используйте другую");
+                System.out.println("Ваша карта не принимается. Используйте другую" + "\n");
         } else
-            System.out.println("Номер карты введён неверно");
+            System.out.println("Номер карты введён неверно" + "\n");
 
     }
 

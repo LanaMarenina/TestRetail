@@ -52,97 +52,61 @@ public class Store {
         return breadAtStore;
     }
 
-    public void setBreadAtStore(Product breadAtStore) {
-        this.breadAtStore = breadAtStore;
-    }
 
     public Product getMilkAtStore() {
         return milkAtStore;
     }
 
-    public void setMilkAtStore(Product milkAtStore) {
-        this.milkAtStore = milkAtStore;
-    }
 
     public Product getBeerAtStore() {
         return beerAtStore;
     }
 
-    public void setBeerAtStore(Product beerAtStore) {
-        this.beerAtStore = beerAtStore;
-    }
 
     public Product getJuiceAtStore() {
         return juiceAtStore;
     }
 
-    public void setJuiceAtStore(Product juiceAtStore) {
-        this.juiceAtStore = juiceAtStore;
-    }
 
     public Product getPowderAtStore() {
         return powderAtStore;
     }
 
-    public void setPowderAtStore(Product powderAtStore) {
-        this.powderAtStore = powderAtStore;
-    }
 
     public Product getSoapAtStore() {
         return soapAtStore;
     }
 
-    public void setSoapAtStore(Product soapAtStore) {
-        this.soapAtStore = soapAtStore;
-    }
 
     public int getBreadAtStoreNum() {
         return breadAtStoreNum;
     }
 
-    public void setBreadAtStoreNum(int breadAtStoreNum) {
-        this.breadAtStoreNum = breadAtStoreNum;
-    }
 
     public int getMilkAtStoreNum() {
         return milkAtStoreNum;
     }
 
-    public void setMilkAtStoreNum(int milkAtStoreNum) {
-        this.milkAtStoreNum = milkAtStoreNum;
-    }
 
     public int getBeerAtStoreNum() {
         return beerAtStoreNum;
     }
 
-    public void setBeerAtStoreNum(int beerAtStoreNum) {
-        this.beerAtStoreNum = beerAtStoreNum;
-    }
 
     public int getJuiceAtStoreNum() {
         return juiceAtStoreNum;
     }
 
-    public void setJuiceAtStoreNum(int juiceAtStoreNum) {
-        this.juiceAtStoreNum = juiceAtStoreNum;
-    }
 
     public int getPowderAtStoreNum() {
         return powderAtStoreNum;
     }
 
-    public void setPowderAtStoreNum(int powderAtStoreNum) {
-        this.powderAtStoreNum = powderAtStoreNum;
-    }
 
     public int getSoapAtStoreNum() {
         return soapAtStoreNum;
     }
 
-    public void setSoapAtStoreNum(int soapAtStoreNum) {
-        this.soapAtStoreNum = soapAtStoreNum;
-    }
 
 
     public String getProductsFromProvider() {

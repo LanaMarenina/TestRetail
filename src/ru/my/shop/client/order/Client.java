@@ -26,24 +26,12 @@ public class Client {
         return nameOfClient;
     }
 
-    public void setNameOfClient(String nameOfClient) {
-        this.nameOfClient = nameOfClient;
-    }
-
     public String getAddressOfClient() {
         return addressOfClient;
     }
 
-    public void setAddressOfClient(String addressOfClient) {
-        this.addressOfClient = addressOfClient;
-    }
-
     public String getPhoneOfClient() {
         return phoneOfClient;
-    }
-
-    public void setPhoneOfClient(String phoneOfClient) {
-        this.phoneOfClient = phoneOfClient;
     }
 
 
@@ -76,11 +64,6 @@ public class Client {
 
     }
 
-
-    public void chooseDelivery() {
-
-
-    }
 
 
 }
