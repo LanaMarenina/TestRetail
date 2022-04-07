@@ -19,7 +19,7 @@ public class Receipt {
 
 
         System.out.println("Информация о платеже:" + "\n" +
-                "Дата покупки - " + currentDate + "\n" +
+                "Дата и время покупки - " + currentDate + "\n" +
                 "Название магазина - " + shop.getNameOfShop() + "\n" +
                 "Адрес магазина - " + shop.getAddressOfShop() + "\n" +
                 "Имя клиента - " + client.getNameOfClient() + "\n" +

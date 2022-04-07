@@ -34,7 +34,12 @@ public class Web {
     public String showOrderToClient() {
 
         order.finalOrder();
-        return "Итого: " + (order.getBreadAtOrderNum() * store.getBreadAtStore().getPriceOfProduct() + order.getMilkAtOrderNum() * store.getMilkAtStore().getPriceOfProduct() + order.getBeerAtOrderNum() * store.getBeerAtStore().getPriceOfProduct() + order.getJuiceAtOrderNum() * store.getJuiceAtStore().getPriceOfProduct()+ order.getPowderAtOrderNum() * store.getPowderAtStore().getPriceOfProduct() + order.getSoapAtOrderNum() * store.getSoapAtStore().getPriceOfProduct()) + " рублей" + "\n";
+        return "Итого: " + (order.getBreadAtOrderNum() * store.getBreadAtStore().getPriceOfProduct()
+                + order.getMilkAtOrderNum() * store.getMilkAtStore().getPriceOfProduct()
+                + order.getBeerAtOrderNum() * store.getBeerAtStore().getPriceOfProduct()
+                + order.getJuiceAtOrderNum() * store.getJuiceAtStore().getPriceOfProduct()
+                + order.getPowderAtOrderNum() * store.getPowderAtStore().getPriceOfProduct()
+                + order.getSoapAtOrderNum() * store.getSoapAtStore().getPriceOfProduct()) + " рублей" + "\n";
 
 
     }
@@ -42,7 +47,13 @@ public class Web {
 
     public void clientIsReadyToPay() {
 
-        System.out.println("К оплате " + (order.getBreadAtOrderNum() * store.getBreadAtStore().getPriceOfProduct() + order.getMilkAtOrderNum() * store.getMilkAtStore().getPriceOfProduct() + order.getBeerAtOrderNum() * store.getBeerAtStore().getPriceOfProduct() + order.getJuiceAtOrderNum() * store.getJuiceAtStore().getPriceOfProduct() + order.getPowderAtOrderNum() * store.getPowderAtStore().getPriceOfProduct() + order.getSoapAtOrderNum() * store.getSoapAtStore().getPriceOfProduct()) + " рублей");
+        System.out.println("К оплате " + (order.getBreadAtOrderNum() * store.getBreadAtStore().getPriceOfProduct()
+                + order.getMilkAtOrderNum() * store.getMilkAtStore().getPriceOfProduct()
+                + order.getBeerAtOrderNum() * store.getBeerAtStore().getPriceOfProduct()
+                + order.getJuiceAtOrderNum() * store.getJuiceAtStore().getPriceOfProduct()
+                + order.getPowderAtOrderNum() * store.getPowderAtStore().getPriceOfProduct()
+                + order.getSoapAtOrderNum() * store.getSoapAtStore().getPriceOfProduct()) + " рублей");
+
         pay.getMoneyFromClient();
 
     }

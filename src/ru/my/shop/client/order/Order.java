@@ -26,13 +26,6 @@ public class Order {
     private Powder powder = new Powder();
     private Soap soap = new Soap();
 
-    private String breadAtOrderName = bread.getNameOfProduct();
-    private String milkAtOrderName = milk.getNameOfProduct();
-    private String beerAtOrderName = beer.getNameOfProduct();
-    private String juiceAtOrderName = juice.getNameOfProduct();
-    private String powderAtOrderName = powder.getNameOfProduct();
-    private String soapAtOrderName = soap.getNameOfProduct();
-
     boolean clientCheckedBread = false;
     boolean clientCheckedMilk = false;
     boolean clientCheckedBeer = true;
@@ -40,9 +33,14 @@ public class Order {
     boolean clientCheckedSoap = false;
     boolean clientCheckedPowder = false;
 
-    public Order() {
 
-    }
+    private String breadAtOrderName = bread.getNameOfProduct();
+    private String milkAtOrderName = milk.getNameOfProduct();
+    private String beerAtOrderName = beer.getNameOfProduct();
+    private String juiceAtOrderName = juice.getNameOfProduct();
+    private String powderAtOrderName = powder.getNameOfProduct();
+    private String soapAtOrderName = soap.getNameOfProduct();
+
 
 
     public int getBreadAtOrderNum() {
@@ -156,6 +154,7 @@ public class Order {
 
         return "0";
     }
+
 
     public void finalOrder() {
 
