@@ -1,69 +1,49 @@
 package ru.my.shop.client.order;
 
-import ru.my.shop.store.Web;
+import ru.my.shop.payment.Pay;
+import ru.my.shop.store.ShopSite;
+
+import java.util.Scanner;
 
 
 public class Client {
 
-    private String nameOfClient = "Морозова Лена";
-    private String addressOfClient = "Москва, ул. Строителей, 123";
-    private String phoneOfClient = "8-900-123-45-67";
-    private Web web = new Web();
+    private String nameOfClient;
 
-
-    public Client(String nameOfClient, String addressOfClient, String phoneOfClient) {
-        this.nameOfClient = nameOfClient;
-        this.addressOfClient = addressOfClient;
-        this.phoneOfClient = phoneOfClient;
-    }
-
-    public Client() {
-
-    }
-
+    private ShopSite shopSite = new ShopSite();
+    private Order order = new Order();
+    private Pay pay = new Pay();
 
     public String getNameOfClient() {
+        System.out.println("Добро пожаловать в наш магазин! Введите ваше имя: ");
+        Scanner askName = new Scanner(System.in);
+        nameOfClient = askName.next();
         return nameOfClient;
     }
 
-    public String getAddressOfClient() {
-        return addressOfClient;
-    }
 
-    public String getPhoneOfClient() {
-        return phoneOfClient;
-    }
-
-
-    public void openTheWeb() {
-
-        web.showExistProductsFromStore();
-        System.out.println("Сайт загружен" + "\n");
+    public void openTheSite() {
+        getNameOfClient();
+        shopSite.showExistProductsFromStore();
 
     }
 
-    public void chooseProductsAtWeb() {
+    public void makeOrder() {
 
-        System.out.println(web.formOrder());
+        System.out.println(order.formOrder());
 
     }
 
+    public void lookMyOrderAtBasket() {
 
-    public void lookMyOrderAtWeb() {
-
-        System.out.println("Ваш заказ: ");
-        System.out.println(web.showOrderToClient());
-
+        System.out.println(order.finalOrder());
 
     }
 
     public void payForOrder() {
 
-        web.clientIsReadyToPay();
-
+        pay.getMoneyFromClient();
 
     }
-
-
 
 }

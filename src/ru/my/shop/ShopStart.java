@@ -1,8 +1,7 @@
 package ru.my.shop;
 
 import ru.my.shop.client.order.Client;
-import ru.my.shop.payment.Receipt;
-import ru.my.shop.store.Store;
+import ru.my.shop.store.Stock;
 
 
 public class ShopStart {
@@ -10,19 +9,18 @@ public class ShopStart {
 
     public static void main(String[] args) {
 
+
         Client client = new Client();
-        client.openTheWeb();
-        client.chooseProductsAtWeb();
-        client.lookMyOrderAtWeb();
+        client.openTheSite();
+        client.makeOrder();
+        client.lookMyOrderAtBasket();
         client.payForOrder();
 
-        Store store = new Store();
-        System.out.println(store.getProductsFromProvider());
-        System.out.println(store.countProductsAtStore());
-        System.out.println(store.countExistProductsAtStore());
+        Stock stock = new Stock();
+        System.out.println(stock.getProductsFromProvider());
+        System.out.println(stock.countProductsAtStore());
+        System.out.println(stock.countExistProductsAtStore());
 
-        Receipt receipt = new Receipt();
-        receipt.printReceipt();
 
     }
 

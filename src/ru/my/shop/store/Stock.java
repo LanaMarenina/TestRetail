@@ -11,7 +11,7 @@ import ru.my.shop.store.Products.Product;
 
 import java.util.Scanner;
 
-public class Store {
+public class Stock {
 
 
     private Product breadAtStore = new Bread();
@@ -237,14 +237,6 @@ public class Store {
 
     }
 
-    public void formBasketFromOrder() {
 
-
-    }
-
-    public void sendBasketToDelivery() {
-
-
-    }
 
 }

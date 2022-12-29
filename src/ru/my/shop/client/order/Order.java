@@ -7,10 +7,10 @@ import ru.my.shop.store.Products.Drink.Juice;
 import ru.my.shop.store.Products.Food.Bread;
 import ru.my.shop.store.Products.Food.Milk;
 
-
 import java.util.Scanner;
 
 public class Order {
+
 
     private static int breadAtOrderNum = 0;
     private static int milkAtOrderNum = 0;
@@ -33,15 +33,12 @@ public class Order {
     boolean clientCheckedSoap = false;
     boolean clientCheckedPowder = false;
 
-
     private String breadAtOrderName = bread.getNameOfProduct();
     private String milkAtOrderName = milk.getNameOfProduct();
     private String beerAtOrderName = beer.getNameOfProduct();
     private String juiceAtOrderName = juice.getNameOfProduct();
     private String powderAtOrderName = powder.getNameOfProduct();
     private String soapAtOrderName = soap.getNameOfProduct();
-
-
 
     public int getBreadAtOrderNum() {
         return breadAtOrderNum;
@@ -152,11 +149,13 @@ public class Order {
 
         }
 
-        return "0";
+        return "Заказ сформирован" + "\n";
     }
 
 
-    public void finalOrder() {
+    public String finalOrder() {
+
+        System.out.println("Ваш заказ: ");
 
         if (breadAtOrderNum > 0) {
 
@@ -193,6 +192,14 @@ public class Order {
             System.out.println(soapAtOrderNum + " " + soapAtOrderName + " - " + soapAtOrderNum * soap.getPriceOfProduct() + " рублей");
 
         }
+
+        return "Итого: " + (breadAtOrderNum * bread.getPriceOfProduct()
+                + milkAtOrderNum * milk.getPriceOfProduct()
+                + beerAtOrderNum * beer.getPriceOfProduct()
+                + juiceAtOrderNum * juice.getPriceOfProduct()
+                + powderAtOrderNum * powder.getPriceOfProduct()
+                + soapAtOrderNum * soap.getPriceOfProduct()) + " рублей" + "\n";
+
 
     }
 
